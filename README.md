@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Arsen Demirci
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+ Surface Plane ()
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  wwww.moma.org
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Homescreen Moma / Landingspagina
+  <img src="readme-images/screencapture-moma-org-mobile.pdf" width="25em" alt="Mobile screencapture Moma Homepage">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Moma eventspagina exhibition  
+  <img src="readme-images/screencapture-moma-org-exhibitions.pdf" width="25em" alt="Moma eventspagina exhibition">
  
 </details>
 
@@ -56,12 +56,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 1e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Tijdens deze les hebben wij ons verplaatst in gebruikers die op een andere manier gebruik maken van het internet. Naar mijn mening een ontzettend uitdagende vorm om gewend aan te raken, vooral als ik mij bedenk dat ik het tot op heden ontzettend gemakkelijk heb gehad ten opzichte van hen. Om het internet toegankelijk en prettig te houden voor iedereen is het daarom ook mijn taak om deze uitdagingen in acht te nemen tijdens het ontwikkelen. 
+
+  De verschillende uitdagingen met betrekking tot de toegankelijkheids-testen worden in de volgende onderdelen hieronder behandelt. 
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Inleiding
+  In dit onderdeel testen mijn partner en ik elkaars website met de screenreader. Wij richten ons op de “koppen” en “links” op de pagina’s die wij zullen ontwikkelen. Afgesproken is dat wij al onze gedachtes en bevindingen hardop uitspreken zodat de ander hier aantekeningen van kan maken en nieuwe inzichten verzamelen. Deveney test de homepage van Moma en een gedetaillerde events-pagina. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+
+
+  Koppen 
+  De headings van de website worden met de screenreader opgepakt. Omdat de website in het engels is, is het van belang dat je als gebruiker hier wel van de hoogte bent. 
+
+  Voor mijn eigen beleving vergt het werken met een screenreader ontzettend veel geduld en concentratie. Je aandacht moet daarom goed besteed worden aan de besturing hiervan en naar de output van de reader. Het prettige hieraan is dat de screenreader voor gebruikers aan te passen is naar eigen behoeftes – zoals het sneller lezen en/of een andere stem selecteren. 
+
+  De koppen worden goed opgepakt en redelijk verstaanbaar opgelezen. De navigatie wordt hierin meegenomen wat het voor de gebruiker overzichtelijk en prettig in gebruik maakt om zo zijn/haar navigatie te vervolgen. 
+
+
+  Links
+  In het volgende onderdeel navigeert Deveny door de verschillende links van de homepagina. Er wordt duidelijk gezegd dat ze zich op een link bevindt, maar niet wat er in de linkjes precies wordt behandeld. Zo kan ik mij voorstellen dat het voor een gebruiker soms wat onduidelijk wordt wat er nu gebeurt als deze een link opent. 
+
+  Als voorbeeld werden de “Events” beknopt behandeld, wat eventueel wat uitgebreider zou kunnen gezien de beperkingen. 
+
 
 
   #### Muis en Toetsenbord 
@@ -71,15 +88,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Het bezoeken van een website met de motorieke beperkingen is immens moeilijk en vergt afhankelijk van de situatie een aangepaste bediening. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Zo had ik voor dit specifieke onderdeel een device op mijn arm geplakt die tussentijds elektrische shocks toediende, waardoor mijn armspieren samentrokken en het gebruiken van een muis en of toetsenbord haast onmogelijk was. In dit geval denk ik dat het van belang is om te kijken naar de situatie per persoon, zo kan het met een lichte vorm van ALS eventueel mogelijk zijn om een aantal aanpassingen te doen met bijvoorbeeld het toetsenbord en/of muis. 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Inleiding
+  In dit onderdeel konden wij met hulp van een aantal brillen bepaalde visuele uitdagingen nabootsen. Hieronder zal ik een aantal van de brillen behandelen die ik heb mogen uitproberen op mijn website. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Zo had ik een bril op waarmee mijn zicht werd beperkt tot enkel alleen een klein gecentreerde stip. Het navigeren door een website en überhaupt bedienen van een laptop werd hierdoor een tijdrovende ervaring. 
+
+  Daarnaast heb ik de website in zwart/wit bediend, wat voor een gebruiker elementen van de algehele beleving en navigatie beperken. Zo was er een afbeelding van een regenboogvlag die in combinatie met de titel een samenhangend geheel vormen, nu kan een gebruiker die kleurenblind is niet direct in één oogopslag dit opmerken. 
+
 
 </details>
 
