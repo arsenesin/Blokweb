@@ -78,11 +78,16 @@ button, summary {
 
 body{
 
-
 	background-color:var(--color-background);
 
+	@media (min-width: 22em;) {
+		body {
+			background-color: green;
+		}
+	}
 }
 	
+
 	a{
 	text-decoration: none;
 	outline: none;	
@@ -139,7 +144,6 @@ header section nav{
 	justify-content: center;
 	align-content: space-between;
 	
-
 	background-color: white;
 
 }
@@ -150,27 +154,143 @@ header section nav ul li{
 
 }
 
-main ul:nth-of-type(1){
-
-	display: flex;
-	flex-direction:column;
-	flex-direction: column;
-	align-items: start;
-
-}
 main > ul{
 	list-style: none;
 	text-decoration: none;
-	background-color: grey;
+	background-color: rgb(248, 248, 216);
 	
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: start;
+
 }
 
 
+main section ul{
 
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	text-decoration: none;
+	background-color: rgb(255, 247, 102);
+
+
+	/* display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(min(22em, 100%), 1fr) );
+	width:40;
+
+	gap:2em; */
+	
+	/* padding:0 2em 2em; */
+	/* display: flex;
+	flex-wrap:wrap;
+	flex-direction: column; */
+
+}
+
+main section ul li{
+
+	display: grid;
+
+}
+
+main section ul li:nth-of-type(odd) {
+	/* de oneven li's hebben twee kolommen */
+	/* de 1e 60% breed, de 2e 40% breed */
+	grid-template-columns:60% 40%;
+	background-color:rgb(153 255 204);
+}
+
+main section ul li:nth-of-type(even) {
+	/* de even li's hebben twee kolommen */
+	/* de 1e 40% breed, de 2e 60% breed */
+	grid-template-columns:40% 60%;
+	background-color:rgb(255 153 153);
+}
+
+main section ul li img {
+	/* de afbeelding xijn zo breed als de cel waar ze in zitten */
+	width:100%;
+	/* en zijn 20em hoog */
+	height:20em;
+	/* met object-fit:cover geef je aan dat de img de hele ruimte moet vullen */
+	/* daarbij behouden de img's hun eigen verhouding */
+  /* wat niet past wordt afgesneden	 */
+	object-fit:cover;
+}
+
+main section ul li:nth-of-type(odd) img {
+	/* de img's in de oneven li's	*/
+  /* beginnen op de 2e kolom-lijn */
+  /* en gaan vaan de 1e rij-lijn tot de 3e rij-lijn (nemen 2 rijen in beslag) */
+	grid-column:2;
+	grid-row-start:1;
+	grid-row-end:3; 
+	/* als de img's niet in de ruimte passen, omdat ze een andere verhouding hebben */
+  /* dan kun je met object-position bepalen vanaf welk punt er delen worden afgesneden */
+	object-position:right center;
+}
+
+main section ul li:nth-of-type(even) img {
+	/* de img's in de even li's	*/
+  /* beginnen op de 1e kolom-lijn */
+  /* en gaan vaan de 1e rij-lijn tot de 3e rij-lijn (nemen 2 rijen in beslag) */
+	grid-column:1;
+	grid-row-start:1;
+	grid-row-end:3;
+	
+	object-position:left center;
+}
+
+
+main section ul:nth-of-type(2) {
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	text-decoration: none;
+	background-color: rgb(252, 247, 247);
+
+}
+
+main section ul li:nth-of-type(1), :nth-of-type(2) {
+	background-color: blueviolet;
+
+
+}
+
+
+/* main section ul figure{
+	position: relative;
+
+	width:60%;
+	display:flex;
+	flex-direction:column;
+	justify-content:left;
+
+	border:0;
+	margin:0;
+	padding:0;
+} */
+
+/* 
+main section ul figure img{
+
+	display: block;
+	position: absolute;
+	right:0;
+	bottom:0;
+	top:0;
+
+	z-index: ;
+	width:40%;
+	height:100%;
+
+
+} */
 
 /* 	
 	flex-wrap: wrap;
