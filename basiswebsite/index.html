@@ -15,22 +15,14 @@
 <body>
 	<header>
 		<section>
-			<ul>
-					<li><a href="#"><h1>MoMA</h1></a></li>
-					<li><a href="#">Members</a></li>
-					<li><a href="#">Tickets</a></li>
-			</ul>
-
+			<nav>
+				<ul>
+						<li><a href="#"><img src="/images/MoMA_files/MomAlogo.png" alt="momalogo"></a></li>
+						<li><a href="#">Members</a></li>
+						<li><a href="#">Tickets</a></li>
+				</ul>
+			</nav>
 		</section>
-
-
-		<!-- 
-			<ul>
-				<li><img src="readme-images/MomAlogo.png"/></li>
-				<li><a href="html/homepage">Members</a></li>
-				<li><a href="html/homepage">Tickets</a></li>
-			</ul>
-		-->
 
 		<section>
 			<nav>
@@ -44,9 +36,6 @@
 			</nav>
 		</section>
 	</header>
-
-
-
 
 
 
@@ -65,6 +54,29 @@
 			</li>
 		</ul>
 
+		<ul class="testul">
+			<li>
+				<a href="#">
+					<div>
+						<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="zooi">
+					</div>
+					<div>
+						<h3>
+							Merett Oppenheim: My Exhibition
+								<div>
+									<p>
+									Through Mar 4, 2023
+										<p>
+										MoMA
+										</p>
+									</p>
+
+							</div>
+						</h3>
+					</div>
+				</a>
+			</li>
+		</ul>
 
 		
 		<section>
@@ -147,35 +159,14 @@
 					<a href="#">
 						<h3>MoMA PS1</h3>
 						<address>Visit MoMa PS1 in Quens
-							Free for New Yorkers/address>
+							Free for New Yorkers
+						</address>
 						<p>learn more</p>
-
 					</a>
 				</li>
 			</ul>
-
-<!--
-			<section>
-				<h3>MoMA</h3>
-				<h4>11 West 53 Street, Manhattan 
-					Open today, 10:30 a.m. - 5:30 p.m. 
-				</h4>
-				<p>Plan your visit </p>
-			</section>
-			<section>
-				<h3>MoMA PS1</h3>
-				<h4>Visit MoMa PS1 in Quens
-					Free for New Yorkers
-				</h4>
-				<p>Learn more </p>
-			</section>
 		</section>
 
-		<section>
-			<h3>Get art and ideas in your inbox</h3>
-			<p>Sign up for our newsletter</p>
-		</section>
--->
 
 
 		<form action="#" method="get">
@@ -197,57 +188,110 @@
 
 
 		<section>
-			<h2>Magazine</h2>
-			<img src="images/MoMA_files/Screen Shot 2022-11-10 at 10.13.03 AM.png" alt="image from item magazine">
-			<h4>Hyundai Card Video Views</h4>
-			<h3>Linda Goode Bryant and Laura Poitras's Flag Wars</h3>
-			<p>In this exclusive three-week screening, an artist explores the
-				gentrification and preservation of her hometown Ohio neighborhood.</p>
-			<p>Nov 16, 2022</p>
+			<ul>
+				<li>
+					<a>
+						<h2>Magazine</h2>
+						<img src="images/MoMA_files/Screen Shot 2022-11-10 at 10.13.03 AM.png" alt="image from item magazine">
+						<h4>Hyundai Card Video Views</h4>
+						<h3>Linda Goode Bryant and Laura Poitras's Flag Wars</h3>
+						<p>In this exclusive three-week screening, an artist explores the
+							gentrification and preservation of her hometown Ohio neighborhood.</p>
+						<p>Nov 16, 2022</p>
+					</a>
+				</li>
+			</ul>
 		</section>
 
-		<section>
-			<h2>In the collection</h2>
-			<img src="images/MoMA_files/341_2021_CCCR-Press Site (1).jpg" alt="changing images from subjects that are in the collection">
-			<p>See what's on view --></p>
-		</section>
+		<!-- Dit is een carousel met wisselende afbeeldingen
+		De code hiervoor heb ik van Sanne gekregen, link/bron: https://codepen.io/shooft/pen/oNzGJMM?editors=1100 -->
+
+		<!-- TO-DO: Hier nog even de bolletjes werkend maken -->
+		<section id="bolletjesAndAutoScroll" class="caroCarousel" aria-label="Voorbeeld met bolletjes en auto-scroll na bepaalde tijd" tabIndex="-1">
+			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+				<h2>In the collection</h2>
+					<ul>
+						<li id="collection1"><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4NSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg" alt="dalton paula canvas 1" /></li>
+						<li id="collection2"><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="dalton paula canvas 2" /></li>
+						<li id="collection3"><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg5MiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg" alt="dalton paula canvas 3" /></li>
+						<li id="collection4"><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg5MSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="dalton paula canvas 4" /></li>
+					</ul>
+
+			<nav>
+					<ul>
+						<li><a href="#element1" aria-label="go to element1"></a></li>
+						<li><a href="#element2" aria-label="go to element2"></a></li>
+						<li><a href="#element3" aria-label="go to element3"></a></li>
+						<li><a href="#element4" aria-label="go to element4"></a></li>
+					</ul>
+			</nav>
+
+			<button aria-label="start/stop autoscroll"></button>
+		  </section>
 
 
-						<figure>
-							<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
+
+
+
+
+		  <!-- VORIG CAROUSEL-->
+		<!-- <section>
+			<a href="">
+				<h2>In the collection</h2>
+					<ul>
+						<li>
+							<img src="images/MoMA_files/341_2021_CCCR-Press Site (1).jpg" alt="changing images from subjects that are in the collection">
+						</li>
+						<li>
+							<img src="images/MoMA_files/20221205_L.jpg" alt="changing images from subjects that are in the collection">
+						</li>
+						<li>
+							<img src="images/MoMA_files/2022_04_09_Pinocchio_1132 1142v3 (2).jpg" alt="changing images from subjects that are in the collection">
+						</li>
+						<li>
+							<img src="images/MoMA_files/341_2021_CCCR-Press Site (1).jpg" alt="changing images from subjects that are in the collection">
+						</li>
+					</ul>
+				<p>See what's on view </p>
+			</a>
+		</section> 
+
+
+
+				<a href="#">
+					<figure>
+						<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
 							<figcaption>
 								<h2>Visit MoMA PS1 in Queens</h2>
 								<p>Free for New Yorkers
 									MoMA PS1</p>
 							</figcaption>
-						</figure>
-					</a>
-
+					</figure>
+				</a>
+-->
 
 		<section>
-			<h2>Events</h2>
 			<ul>
 				<li>
-					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
-					<h3>Material Worlds: Water Futures</h3>
-					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online
-						Lecture/panel
-					</p>
+					<h2>Events</h2>
+				</li>
 				<li>
 					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
 					<h3>Material Worlds: Water Futures</h3>
 					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online
-						Lecture/panel
-					</p>
-				</li>
-				<li>					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
+					<p>Online Lecture/panel</p>
+				<li>
+					<img src="images/MoMA_files/2022_04_09_Pinocchio_1132 1142v3 (2).jpg" alt="Image Merett Oppenheim">
 					<h3>Material Worlds: Water Futures</h3>
 					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online
-						Lecture/panel
-					</p></li>
+					<p>Online Lecture/panel</p>
+				</li>
+				<li>					
+					<img src="images/MoMA_files/20221204_R.jpg" alt="Image Merett Oppenheim">
+					<h3>Material Worlds: Water Futures</h3>
+					<p>Thu, Dec 1, 12:00 p.m.</p>
+					<p>Online Lecture/panel</p>
+				</li>
 			</ul>
 			<a href="#">View all events</a>
 		</section>
@@ -308,7 +352,7 @@
 
 
 <footer>
-	<section>
+	<section class="footertest">
 		<ul>
 			<li><a href="#">About us</a></li>
 			<li><a href="#">Support</a></li>
