@@ -1,14 +1,47 @@
+@font-face {
+	font-family: momafont;
+	src: url(../fonts/moma-sans__regular.woff2);
+	font-style: normal;
+	font-weight: 400;
+  }
+
+  @font-face {
+	font-family: momafont;
+	src: url(../fonts/moma-sans__regular--italic.woff2);
+	font-style: italic;
+	font-weight: 400;
+  }
+
+  @font-face {
+	font-family: momafont;
+	src: url(../fonts/moma-sans__bold.woff2);
+	font-style: normal;
+	font-weight: 700;
+  }
+
+  @font-face {
+	font-family: momafont;
+	src: url(../fonts/moma-sans__bold--italic.woff2);
+	font-style: italic;
+	font-weight: 700;
+  }
+
 /**************/
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  font-family: momafont, sans-serif; 
 }
 
 button, summary {
 	cursor: pointer;
 }
 
+img{
+	width:100%;
+
+}
 
 
 
@@ -19,7 +52,68 @@ button, summary {
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-whitetext:white;
+	--color-background:rgb(255, 255, 255);
+
+	--white:#FFFFFF;
+
+	--color-stickynav:black;
+	--color-a:var(#111);
+
+
+	--color-p:black;
+
+	--font-family:momafont;
+	--font-style-italic:italic;
+	--font-style-normal:normal;
+	--font-weight-400:400;
+	--font-weight-700:700;
+
+	--fs-h1:3em;
+	--fs-h2:2em;
+	--fs-h3:1.5em;
+
+	--h1-colorwhite:white;
+	--h1-colorblack:black;
+	--h2-colorwhite:white;
+	--h2-colorblack:black;
+	--h3-colorwhite:white;
+	--h3-colorblack:black;
+	--h3-colorgreen:rgba(128, 255, 0, 0.651);
+
+	--p-letterspacing:.02em;
+	--p-wordspacing:.03em;
+
+	--h-letterspacing:.04em;
+	--h-wordspacing:.01em;
+
+
+	--color-accent:dodgerblue;
+	--color-focus:rebeccapurple;
+
+	--main-color:hsl(0 0% 100%);
+	--background-color:rgb(0 24 54);
+	--shadow-color:Cyan;
+
+	--color-greytext:rgb(97, 96, 96);
+	--color-button-background:#aaa;
+	--color-button-submit-text:#fff;
+
+
+	
+	--size-whitespace:1em;
+	--sec--pad:2em;
+
+	--line-height:0.25em;
+
+	--accent-color:rgb(230, 110, 130);
+
+	--white-space:5vw;
+
+	/* Carousel waarden */
+	--maxWidth:32rem;
+
+
 }
 
 
@@ -31,4 +125,958 @@ button, summary {
 /****************/
 
 /* jouw code */
+
+
+body{
+
+	margin:0;
+	padding:0;
+
+	list-style-type: none;
+	text-decoration: none;
+
+	background-color:var(--color-background);
+
+
+	@media (min-width: 22em;) {
+		body {
+			background-color: #FFFFFF;
+		}
+	}
+
+	/* @media (min-width: 47em;) {
+		main section:nth-of-type(2) ul {
+			grid-template-columns: minmax (24em, 2fr);
+			gap: 1em;
+		}
+
+
+	} */
+}
+	/* VRAAG: Hoe zorg ik ervoor dat de grid fractions op twee komen te staan bij "Magazine" */
+	/* @media (min-width:38em) {
+		main section:nth-of-type(3) ul{
+			grid-template-columns: repeat(1) minmax(0, 1fr);
+		}
+		 */
+
+	a{
+	text-decoration: none;
+	outline: none;	
+	/* color: #111; */
+	/* padding: 0;
+	margin: 0; */
+	}
+
+	/* a:link{
+
+	}
+	a:visited {
+	}
+	
+	a:focus {
+	}
+	
+	a:hover {
+	}
+	
+	a:active {
+	} */
+
+
+
+
+header section:nth-of-type(1){
+	display: grid;
+	gap:var(--tmplt-size-whitespace);
+
+}
+
+header section:first-of-type ul{
+	display: flex;
+	gap:.5em;
+
+	position: relative;
+	margin:0;
+	padding:1em;
+	list-style:none;
+
+}
+
+header section:nth-of-type(1) li{
+	padding:.5em;
+	font-weight: 700;
+}
+
+header section:nth-of-type(1) a{
+	height: 1.75em;
+	color: green;
+}
+
+header section:nth-of-type(1) li:first-of-type{
+	/* de margin-right van het eerste kind wordt zo groot als de ruimte die over is */
+ 	/* daarmee worden de andere kinderen naar rechts 'geduwd' */
+	margin-right: auto;
+	flex-grow:1;
+
+}
+
+
+
+/* HEADER SECTION NAVIGATIE CATEGORIEN */
+
+header section:nth-of-type(2){
+	font-family: var(--fs-h3);
+	font-weight: 700;
+
+}
+
+header section:nth-of-type(2) ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	list-style: none;
+	text-decoration: none;
+	
+	margin: 0;
+	padding: 0;
+	
+}
+
+header section:nth-of-type(2) li{
+	flex-basis:content;
+
+	padding:.5em;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:.125em;
+	
+}
+
+header section:nth-of-type(2) ul li a {
+	color: var(--color-stickynav)
+}
+
+
+/* 
+header section 
+/* header div h1 {
+	max-width: 100%;
+	height: auto;
+
+} */
+
+/* .container {
+	width: 60em;
+	max-width: 100%;
+	padding: 1em;
+	margin: 0 auto;
+} */
+
+/* header section ul{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: baseline;
+	
+	padding:.5em;
+	/* margin:.5em;
+
+	list-style: none;
+	text-decoration: none;
+
+	font-family: var(--fs-h3);
+	font-weight: 700;
+	font-size: 1em;
+	
+	background-color: white;
+}
+
+
+header section:nth-of-type(2) nav{
+
+	position: sticky;
+
+	width: 100%;
+	top:0;
+	/* gap:.5em;
+	padding:.5em; 
+
+	display:flex;
+	justify-content: center;
+	align-content: space-between;
+
+	background-color: rgb(105, 52, 52);
+	padding-bottom: 1em;
+
+}
+
+header section nav ul{
+	width: 100%;
+}
+
+
+header section nav ul li{
+	text-decoration: none;
+	color: 
+
+}  */
+
+
+/* INFORMATIE BANNER */
+main div ul {
+	list-style: none;
+	text-decoration: none;
+
+	background-color: rgb(244, 244, 240);
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: start;
+}
+
+main div ul p{
+	font-family: var(--font-family);
+	font-style: var(--font-style-normal);
+	font-weight: var(--font-weight-700);
+	color: var(--color-greytext);
+	font-size: 1em;
+}
+
+
+
+
+/* UL HERO MAIN */
+main section:nth-of-type(1) ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+main section:nth-of-type(1) ul li a {
+	display: grid;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(odd) a{
+	/* de oneven li's hebben twee kolommen */
+	/* de 1e 60% breed, de 2e 40% breed */
+	grid-template-columns:1fr 40%;
+	background-color:rgb(153 255 204);
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(even) a{
+	/* de even li's hebben twee kolommen */
+	/* de 1e 40% breed, de 2e 60% breed */
+	grid-template-columns:40% 1fr;
+	background-color:rgb(255 153 153);
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(1) a {
+	background-color:#0057E9;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(2) a {
+	background-color:#E11845;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(3) a {
+	background-color:#F2CA19;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(4) a {
+	background-color:#8931EF;
+}
+
+main section:nth-of-type(1) ul h3 {
+	font-family: var(--font-family);
+	font-size: var(--fs-h3);
+	color:rgb(255, 255, 255);
+
+	padding:1em;
+	margin:0;
+
+	align-self: start;
+}
+
+main section:nth-of-type(1) ul p {
+	font-size: 1em;
+	align-self: end;
+	color: white;
+	padding:1em;
+	margin:0;
+}
+
+main section:nth-of-type(1) ul li img {
+	/* de afbeelding xijn zo breed als de cel waar ze in zitten */
+	width:100%;
+	/* en zijn 20em hoog */
+	height:15em;
+	/* met object-fit:cover geef je aan dat de img de hele ruimte moet vullen */
+	/* daarbij behouden de img's hun eigen verhouding */
+  	/* wat niet past wordt afgesneden	 */
+	object-fit:cover;
+
+	grid-row-start:1;
+	grid-row-end:4; 
+}
+/* 
+main section:nth-of-type(1) ul li img {
+	grid-row-start:1;
+	grid-row-end:4; 
+} */
+
+main section:nth-of-type(1) ul li:nth-of-type(odd) img {
+/* de img's in de oneven li's */
+/* beginnen op de 2e kolom-lijn */
+/* en gaan vaan de 1e rij-lijn tot de 3e rij-lijn (nemen 2 rijen in beslag) */
+	/* grid-column:2; */
+	
+/* als de img's niet in de ruimte passen, omdat ze een andere verhouding hebben */
+/* dan kun je met object-position bepalen vanaf welk punt er delen worden afgesneden */
+	/* object-position:right center; */
+}
+
+
+main section:nth-of-type(1) ul li:nth-of-type(even) img {
+	/* de img's in de even li's	*/
+  	/* beginnen op de 1e kolom-lijn */
+  	/* en gaan vaan de 1e rij-lijn tot de 3e rij-lijn (nemen 2 rijen in beslag) */
+	/* grid-column:1; */
+	object-position:75% 50%;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(1) img {
+	grid-column: 2;
+	object-position:75% 50%;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(2) img {
+	grid-column: 1;
+	object-position:75% 50%;
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(3) img {
+	grid-column: 2;
+	object-position:25% 50%;
+
+}
+
+main section:nth-of-type(1) ul li:nth-of-type(4) img {
+	grid-column: 1;
+	object-position:75% 50%;
+}
+
+
+
+/* MOMA ADRES */
+main section:nth-of-type(2) {
+	margin: 0em;
+	padding: .5em;
+	margin-bottom: 4em;
+}
+
+main section:nth-of-type(2) ul {
+	margin: 0em;
+	padding: 0em;
+	gap: 0em;
+
+	list-style: none;
+	text-decoration: none;
+
+	display: grid;
+	grid-template-columns: minmax (23em, 1fr);
+	gap: 1em;
+	
+
+}
+
+
+main section:nth-of-type(2) ul h3 {
+	font-family: var(--font-family);
+	color: var(--color-p);
+
+	text-align: center;
+}
+
+main section:nth-of-type(2) ul address {
+	font-family: var(--font-family);
+	color: var(--color-p);
+
+	list-style: none;
+	text-decoration: none;
+	text-align: center;
+}
+
+main section:nth-of-type(2) ul li p {
+	font-family: var(--font-family);
+	color: var(--color-p);
+
+	text-align: center;
+}
+
+main section:nth-of-type(2) ul li:nth-child(1) p:nth-of-type(2) {
+	font-weight: 700;
+}
+
+main section:nth-of-type(2) ul li:nth-child(2) p:nth-of-type(2) {
+	font-weight: 700;
+}
+
+
+/* 
+main section:nth-of-type(2) ul li:nth-of-type(1) a {
+	padding: 0em;
+	background-color:#E11845;
+}
+
+main section:nth-of-type(2) ul li:nth-of-type(2) a {
+	padding: 0em;
+	background-color:#F2CA19;
+
+} */
+
+/* VRAAG: Waarom lukt het mij niet bij de eerste P en wel bij de
+tweede om deze onderaan in de ul te plaatsen qua positie? */
+/* main section:nth-of-type(2) ul li:nth-child(1) p {
+	position: absolute;
+	bottom: 0;
+} */
+
+
+
+
+/* FORM */
+form{
+	padding: 1em;
+	border: solid;
+	border-color: black;
+	border-width: .2em;
+	margin: .5em;
+
+	background-color: white;
+	margin-bottom: 6em;
+}
+
+form ul{
+	display: flex;
+	flex-direction: column;
+
+	text-decoration: none;
+	list-style: none;
+
+	font-weight: 700;
+	
+}
+
+
+/* MAGAZINE */
+main section:nth-of-type(3) {
+	text-decoration: none;
+	list-style: none;
+
+	margin: 0;
+	padding: .5em;
+
+	background-color: blueviolet;
+}
+
+main section:nth-of-type(3) h2 {
+	margin: 0;
+	margin-bottom: 1em;
+	line-height: 1em;
+	letter-spacing: .1em;
+}
+
+
+main section:nth-of-type(3) ul {
+	margin: 0;
+	padding: 0;
+	
+	display: grid;
+	grid-template-columns:min(100%, 23.4375em);
+	align-items: center;
+}
+
+main section:nth-of-type(3) li {
+	text-decoration: none;
+	list-style: none;
+
+	margin: 0;
+	padding: 0;
+
+}
+
+main section:nth-of-type(3) li img {
+	width:100%;
+	height:auto;
+	align-self:stretch;
+	object-fit:cover;
+}
+
+main section:nth-of-type(3) li h3:nth-of-type(1) {
+	font-family: var(--fs-h3);
+	color:rgba(128, 255, 0, 0.651);
+
+}
+
+main section:nth-of-type(3) li h3:nth-of-type(2) {
+	font-family: var(--fs-h3);
+	color: var(--h3-colorwhite);
+	letter-spacing: var(--h-letterspacing);
+	word-spacing: var(--h-wordspacing);
+}
+
+main section:nth-of-type(3) p {
+	letter-spacing:var(--p-letterspacing);
+	word-spacing:var(--p-wordspacing);
+}
+
+
+/* main section:nth-of-type(3){
+	margin: 4em 0 0 0;
+	padding: 1em .75em;
+	
+	--color-background:var(--color-background);
+
+}
+
+main section:nth-of-type(3) ul{
+	width: 100%;
+
+	display: grid;
+	gap:var(--white-space);
+	grid-template-columns: 1fr;
+
+}
+@media (min-width:20em) {
+	:root {
+	  --white-space:3vw;
+	}
+
+	main section:nth-of-type(3) li {
+		grid-template-columns:1fr 1fr;
+		grid-auto-rows:30vw;
+	  }
+} 
+
+
+main section:nth-of-type(3) h2{
+	
+	font-size: 1.5em;
+}
+
+main section:nth-of-type(4) img{
+	/* Display block: The element generates a block element box, 
+	generating line breaks both before and after the element when in 
+	the normal flow. 
+	display: block;
+	width: 100%;
+	height: auto;
+}
+main section:nth-of-type(4) p{
+	word-spacing: .3em;
+
+}
+*/
+
+/* IN THE COLLECTION - CAROUSEL */
+/* Bron: https://codepen.io/shooft/pen/oNzGJMM?editors=0100 */
+.caroCarrousel {
+	--caroCarrouselMainColor:#333;
+	--caroCarrouselAccentColor:#1b75b3;
+	--caroCarrouselShadeColor:#ddd9;
+	--caroCarrouselInverseColor:#e48a4c;
+	
+	--caroCarrouselAutoScrollInterval:4000;
+
+	position: relative;
+	outline:none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.caroCarrousel {
+	  --caroCarrouselMainColor:#ccc;
+	  --caroCarrouselShadeColor:#4449;
+	}
+  }
+
+.caroCarrousel > ul {
+	margin: 0; 
+	padding: 1em;
+	list-style: none;
+	display: flex;
+	  
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+	  
+	/* snappen als er gescrolled wordt - andere helft bij li */
+	scroll-snap-type: inline mandatory;
+	
+	/* smooth als met js gescrolled wordt */
+	scroll-behavior: smooth;
+	
+	/* scrollbar zoveel mogelijk verbergen */
+	-webkit-overflow-scrolling: touch; /* voor iOS*/
+	-ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+  }
+
+.caroCarrousel > ul::-webkit-scrollbar {
+	/* scrollbar zoveel mogelijk verbergen */
+	display: none; /* voor chrome, safari en edge*/
+  }
+
+
+/**************************/
+/* de carrousel elementen */
+.caroCarrousel > ul li {
+	flex-basis: 100%;
+	flex-shrink: 0;
+	/* snappen als er gescrolled wordt - andere helft bij ul */
+	scroll-snap-align:center;
+  }
+
+
+/* de carrousel elementen content */
+/* de stijlen voor jouw content hier */
+.caroCarrousel > ul li > img {
+	display: block;
+	width: 100%;
+  }
+  
+
+/* de bolletjes container */
+.caroCarrousel nav ul {
+	position: absolute;
+	left: 2em; 
+	right: 2em;
+	bottom: 0;
+	margin: 0;
+	padding: 0 0 .5em;
+	list-style: none;
+	  
+	display: flex;
+  	/* flex-wrap:wrap; */
+	justify-content: center;
+	gap:.4em;
+  }
+
+/* een bolletje container */
+.caroCarrousel > nav li {
+	flex-basis: 1.2em;
+	aspect-ratio: 1/1;
+}
+
+/* de bolletjes */
+.caroCarrousel > nav a {
+  	display: block;
+  	width:100%;
+  	height:100%;
+  
+	text-decoration: none;
+	color: var(--caroCarrouselMainColor);
+  	background-color: var(--caroCarrouselShadeColor);
+	border-radius: 50%;
+  	outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+  
+  	transition: 0.5s;
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+	color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+	background-color: currentColor;
+}
+
+.caroCarrousel > nav a:hover,
+.caroCarrousel > nav a:focus {
+	color: var(--caroCarrouselAccentColor);
+}
+
+.caroCarrousel > nav a.current {
+	background-color: currentColor;
+}
+
+
+/*********************/
+/* PLAY/PAUSE BUTTON */
+/*********************/
+
+.caroCarrousel > button {
+	position: absolute;
+	right: .5em;
+	bottom: .5em;
+	
+	width: 1.2em;
+	aspect-ratio:1/1;
+	padding:0;
+	
+	font-size:inherit;
+	appearance: none;
+	background-color: var(--caroCarrouselShadeColor);
+
+  	border: none;
+	outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+	cursor: pointer;
+	
+  	transition: 0.5s;
+
+	display: flex;
+  	justify-content: center;
+	align-items: center;
+}
+
+.caroCarrousel > button:hover,
+.caroCarrousel > button:focus {
+  	color: var(--caroCarrouselAccentColor);
+}
+
+/* play/pause button */
+.caroCarrousel > button::before,
+.caroCarrousel > button::after {
+	content: "";
+	position: absolute;
+	width: .5em; height: 2px;
+	background-color: currentColor;
+	transform-origin: calc(100% - 1px) center;
+	transition:transform 0.5s;
+}
+
+/* indien niet aan het auto-scrollen */
+/* de streepjes vormen een play-icoon */
+.caroCarrousel > button::before {
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrousel > button::after {
+	transform: translateY(0) rotate(-45deg);
+}
+
+/* indien aan het auto-scrollen */
+/* de streepjes vormen een pauze-icoon */
+.caroCarrousel.autoScrolling > button::before {
+	transform: translateY(-2px);
+}
+.caroCarrousel.autoScrolling > button::after {
+	transform: translateY(2px);
+}
+
+/* in de button draait een 'eierwekker' */
+.caroCarrousel.autoScrolling > button {
+	animation-name: carrouselAutoScrollingButton;
+  	animation-duration: calc(var(--caroCarrouselAutoScrollInterval) * 1ms);
+  	animation-timing-function: linear;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes carrouselAutoScrollingButton {
+	0%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 0%, transparent 0%); }
+	2%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 2%, transparent 0%); }
+	4%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 4%, transparent 0%); }
+	6%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 6%, transparent 0%); }
+	8%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 8%, transparent 0%); }
+	
+	10%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 10%, transparent 0%); }
+	12%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 12%, transparent 0%); }
+	14%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 14%, transparent 0%); }
+	16%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 16%, transparent 0%); }
+	18%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 18%, transparent 0%); }
+
+	20%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 20%, transparent 0%); }
+	22%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 22%, transparent 0%); }
+	24%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 24%, transparent 0%); }
+	26%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 26%, transparent 0%); }
+	28%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 28%, transparent 0%); }
+
+	30%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 30%, transparent 0%); }
+	32%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 32%, transparent 0%); }
+	34%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 34%, transparent 0%); }
+	36%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 36%, transparent 0%); }
+	38%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 38%, transparent 0%); }
+
+	40%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 40%, transparent 0%); }
+	42%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 42%, transparent 0%); }
+	44%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 44%, transparent 0%); }
+	46%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 46%, transparent 0%); }
+	48%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 48%, transparent 0%); }
+
+	50%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 50%, transparent 0%); }
+	52%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 52%, transparent 0%); }
+	54%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 54%, transparent 0%); }
+	56%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 56%, transparent 0%); }
+	58%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 58%, transparent 0%); }
+
+	60%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 60%, transparent 0%); }
+	62%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 62%, transparent 0%); }
+	64%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 64%, transparent 0%); }
+	66%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 66%, transparent 0%); }
+	68%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 68%, transparent 0%); }
+
+	70%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 70%, transparent 0%); }
+	72%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 72%, transparent 0%); }
+	74%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 74%, transparent 0%); }
+	76%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 76%, transparent 0%); }
+	78%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 78%, transparent 0%); }
+
+	80%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 80%, transparent 0%); }
+	82%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 82%, transparent 0%); }
+	84%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 84%, transparent 0%); }
+	86%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 86%, transparent 0%); }
+	88%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 88%, transparent 0%); }
+
+	90%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 90%, transparent 0%); }
+	92%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 92%, transparent 0%); }
+	94%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 94%, transparent 0%); }
+	96%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 96%, transparent 0%); }
+	98%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 98%, transparent 0%); }
+	
+	100%{ background-image: conic-gradient(var(--caroCarrouselInverseColor) 100%, transparent 0%); }
+}
+
+/* EVENTS ONDERDEEL - GRID*/
+/* VRAAG: waarom krijg ik in dit onderdeel error-meldingen mbt  */
+  main section:nth-of-type(5) h2{
+	font-family:var(--body-fonts)
+	font-size:var(var(--fs-h2));
+
+	padding: 5em;
+  }
+
+
+  main section:nth-of-type(5) ul{
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(22em, 3fr));
+	grid-template-rows: repeat(3, 5em);
+	grid-gap: 2em;
+
+	align-items: center; 
+
+  }
+
+  /* main section:nth-of-type(5) li{
+  } */
+
+  main section:nth-of-type(5) img{
+	display: block;
+	width:100%;
+	object-fit:contain;
+  }
+
+  main section:nth-of-type(5) h3{
+	font-family:var(--body-fonts);
+	font-size:var(--fs-h3);
+	font-weight:700;
+  }
+  
+  main section:nth-of-type(5) p{
+	font-family:var(--body-fonts);
+	letter-spacing:.025em;
+
+  }
+
+  /* DISCOVER MORE AS A MEMBER */
+  main section:nth-of-type(6){
+	display:grid;
+	grid-auto-columns:min-content;  
+	/* place-content: center; */
+	
+	text-align:left;
+	
+
+	border-radius: .5em;
+	background-color:rgb(255, 136, 45);
+
+  }
+
+
+  main section:nth-of-type(6) h2{
+	text-align: left;
+}
+
+
+/* STORE */
+
+
+/* FOOTER */
+
+footer hp, p, h1, h2, h3 {
+	color:var(--color-whitetext);
+}
+
+footer {
+	background-color:rgba(8, 8, 8, 0.6);
+}
+
+footer section:nth-of-type(1) {
+	padding: 1em 0em 0em 1em;
+}
+
+footer section:nth-of-type(1) ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	text-decoration: none;
+
+}
+
+
+
+/* 
+main section:nth-of-type(4) h2{
+	position:static;
+	margin:0;
+	z-index:100;
+}
+
+
+main section:nth-of-type(4) ul{
+	position:relative;
+	margin:1em;
+	padding:0;
+	list-style:none;
+}
+
+
+main section:nth-of-type(4) li{
+	position:absolute;
+	width:100%;
+	
+	animation-name:slideshow;
+	animation-duration:8s;
+	animation-iteration-count:infinite;
+}
+
+main section:nth-of-type(4) li:nth-of-type(1) {
+	animation-delay:0s;
+}
+
+main section:nth-of-type(4) li:nth-of-type(1) {
+	animation-delay:2s;
+}
+
+main section:nth-of-type(4) li:nth-of-type(1) {
+	animation-delay:4s;
+}
+
+main section:nth-of-type(4) li:nth-of-type(1) {
+	animation-delay:6s;
+}
+
+
+main section:nth-of-type(4) ul img{
+
+		display:block;
+		width:100%;
+
+} */
 
