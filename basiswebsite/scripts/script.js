@@ -2,14 +2,14 @@
 console.log("hi");
 
 function createCaroCarrousel(carrouselID) {
-let carrousel = document.querySelector("#"+carrouselID);
-let carrouselElementsContainer = carrousel.querySelector(":scope > ul");
-let carrouselElements = carrouselElementsContainer.querySelectorAll("li");
-let bolletjes = carrousel.querySelectorAll(":scope > nav a");
-let linkButtons = carrousel.querySelectorAll(":scope > a");
+    let carrousel = document.querySelector("#"+carrouselID);
+    let carrouselElementsContainer = carrousel.querySelector(":scope > ul");
+	let carrouselElements = carrouselElementsContainer.querySelectorAll("li");
+    let bolletjes = carrousel.querySelectorAll(":scope > nav a");
+    let linkButtons = carrousel.querySelectorAll(":scope > a");
   
-let autoScrollInterval = 4000;
-let autoScrollTimer;
+    let autoScrollInterval = 4000;
+    let autoScrollTimer;
 	
   
 /****************/
@@ -31,8 +31,8 @@ let autoScrollTimer;
           stopAutoScroll();
         }
 
-				// het nieuwe element opzoeken
-				let newElement = carrousel.querySelector(this.hash);
+		// het nieuwe element opzoeken
+		let newElement = carrousel.querySelector(this.hash);
         
         // dan naar het element met ID scrollen
         scrollToElement(newElement);
@@ -41,11 +41,11 @@ let autoScrollTimer;
 	}
   
   
-  /*****************/
-	/* AUTO SCROLLEN */
-	/*****************/
+/*****************/
+/* AUTO SCROLLEN */
+/*****************/
 
-	// auto scroll starten
+// auto scroll starten
 	function startAutoScroll() {
     // de class "autoScrolling" toevoegen aan de carrousel
     carrousel.classList.add("autoScrolling");
@@ -66,7 +66,7 @@ let autoScrollTimer;
     clearInterval(autoScrollTimer);
   }
 
-	// auto scroll initieren en activeren
+    // auto scroll initieren en activeren
   function iniAutoScroll() {
     // de play button naar kliks laten luisteren
     let playButton = carrousel.querySelector(":scope > button");
@@ -86,17 +86,17 @@ let autoScrollTimer;
 	}
   
   
-  /*****************/
-	/* START POSITIE */
-	/*****************/
+/*****************/
+/* START POSITIE */
+/*****************/
   
 	// het eerste element en bolletje actief maaken
-    function iniStartPosition() {
+  function iniStartPosition() {
     // eerste element current maken
     carrouselElements[0].classList.add("current");
     // eerste bolletje current maken
-	bolletjes[0].classList.add("current");
-	// aan het begin van de container starten
+		bolletjes[0].classList.add("current");
+		// aan het begin van de container starten
     carrouselElementsContainer.scrollLeft = 0;
   }
   
@@ -105,8 +105,8 @@ let autoScrollTimer;
 /* ALGEMENE FUNCTIES */
 /*********************/
   
-  //////////////////////////////////
-  // naar volgende/vorige element //
+//////////////////////////////////
+// naar volgende/vorige element //
   function goToElement(direction) {
 		// het huidige current element opzoeken
 		let currentElement = carrousel.querySelector(":scope > ul > .current");
@@ -133,8 +133,8 @@ let autoScrollTimer;
   }
   
   
-  ///////////////////////////
-  // scroll to new element //
+///////////////////////////
+// scroll to new element //
   function scrollToElement(newElement) {
     // carousel container opzoeken
     let carouselElementsContainer = newElement.closest("ul");
@@ -155,8 +155,8 @@ let autoScrollTimer;
   }
   
   
-  ////////////////////////////
-	// update current element //
+////////////////////////////
+// update current element //
 	function updateCurrentElement(newElement) {
 		// het huidige current element opzoeken
 		let currentElement = carrousel.querySelector(":scope > ul > .current");
@@ -168,8 +168,8 @@ let autoScrollTimer;
 	}
 
   
-  //////////////////////
-  // update bolletjes //
+//////////////////////
+// update bolletjes //
   function updateBolletjes(newElement){
 		// het huidige current bolletje opzoeken
 		let currentBolletje = carrousel.querySelector(":scope > nav .current");
@@ -183,14 +183,13 @@ let autoScrollTimer;
   }
 
   
-	// de bolletjes activeren
+ // de bolletjes activeren
   iniBolletjes();	
-  // de carrousel bij het begin starten
+// de carrousel bij het begin starten
   iniStartPosition();
-  // auto scroll activeren 
+ // auto scroll activeren 
   iniAutoScroll();
 }
-
 
 /************************/
 /* DE CARROUSEL CREËREN */
