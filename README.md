@@ -171,10 +171,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   samen met je groepje opstellen
 
   | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
+  | ---            | ---                | ---          | Arsen               |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
+
+Arsen: Hoe kan ik een wisselende afbeelding zoals sponsoren het best weergeven ipv verschillende list-items in de HTML op te nemen
+
+Hoe kan ik gebruik maken van iconen? 
+
 
 
   ### Verslag van meeting

@@ -14,7 +14,6 @@
 
 <body>
 	<header>
-		<section>
 			<nav>
 				<ul>
 						<li><a href="#"><img src="/images/MoMA_files/MomAlogo.png" alt="momalogo"></a></li>
@@ -22,9 +21,8 @@
 						<li><a href="#">Tickets</a></li>
 				</ul>
 			</nav>
-		</section>
 
-		<section>
+
 			<nav>
 				<ul>
 					<li><a href="#">Visit</a></li>
@@ -32,16 +30,21 @@
 					<li><a href="#">Art</a></li>
 					<li><a href="#">Store</a></li>
 					<li><a href="#">Search</a></li>
+					<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></a></li>
 				</ul>
 			</nav>
-		</section>
 	</header>
 
 
 
 
+	<!-- Aanpassen naar section -->
+
+
 	<main>
-		<div>
+
+	<!-- SECTION #1 Banner -->
+		<section>
 			<ul>
 				<li>
 					<a href="#">
@@ -54,9 +57,10 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</section>
 
-	<!-- Section #1 in Main -->
+
+	<!-- Section #2 in Main -->
 		<section>
 			<ul>
 				<li>
@@ -90,7 +94,7 @@
 				</li>
 		</section>
 
-	<!-- Section #2 in Main -->
+	<!-- Section #3 in Main -->
 		<section>
 			<ul>
 				<li>
@@ -114,31 +118,31 @@
 		</section>
 
 
+	<!-- FORM - SECTION #4 -->
 
-		<form action="#" method="get">
-			<ul>
-				<li>
-					<p>Get art and ideas in your inbox</p>
-				</li>
-				<li>
-				  <label for="mail">Sign up for our newsletter</label>
-				  <input type="email" id="mail" name="user_email" />
-				</li>
-				<li>
-					<button>
-						<i></i>
-					</button>
-				</li>
-			  </ul>
+		<form action="#">
+			<label for="email">Get art and ideas in your inbox</label>
+			<input type="email" id="email" name="email" placeholder="Sign up for our newsletter">
 		</form>
 
-	<!-- MAGAZINE - Section #3 in Main -->
+		<section class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M22.7 33.4c13.5-4.1 28.1 1.1 35.9 12.9L224 294.3 389.4 46.2c7.8-11.7 22.4-17 35.9-12.9S448 49.9 448 64V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V169.7L250.6 369.8c-5.9 8.9-15.9 14.2-26.6 14.2s-20.7-5.3-26.6-14.2L64 169.7V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 49.9 9.2 37.5 22.7 33.4z"/></svg>
+		</section>
+		
+
+
+
+	<!-- MAGAZINE - Section #5 in Main -->
 		<section>
 			<h2>Magazine</h2>
-				<ul>
+				<ul> 
 					<li>
 						<a>
-							<img src="images/MoMA_files/Screen Shot 2022-11-10 at 10.13.03 AM.png" alt="image from item magazine">
+						<img src="images/MoMA_files/Screen Shot 2022-11-10 at 10.13.03 AM.png" alt="image from item magazine">
+						</a>
+					</li>
+					<li>
+						<a href="#">
 							<h3>Hyundai Card Video Views</h3>
 							<h3>Linda Goode Bryant and Laura Poitras's Flag Wars</h3>
 							<p>In this exclusive three-week screening, an artist explores the
@@ -149,12 +153,11 @@
 				</ul>
 		</section>
 
-		
+
 <!-- Dit is een carousel met wisselende afbeeldingen
 De code hiervoor heb ik van Sanne gekregen, link/bron: https://codepen.io/shooft/pen/oNzGJMM?editors=1100 -->
 <!-- Correcte versie: https://codepen.io/shooft/pen/oNzGJMM?editors=0100 -->
-<!-- TO-DO: Hier nog even de bolletjes werkend maken -->
-	<!-- Section #4 in Main -->
+	<!-- Section #6 in Main -->
 	<section>
 		<h2>In the collection</h2>
 		<section id="bolletjesAndAutoScroll" class="caroCarrousel" aria-label="Voorbeeld met bolletjes en auto-scroll na bepaalde tijd" tabIndex="-1">
@@ -179,87 +182,130 @@ De code hiervoor heb ik van Sanne gekregen, link/bron: https://codepen.io/shooft
 		  </section>
 	</section>
 
+	<!-- Section #7 in Main -->
+	<section class="eventssection">
+		<h2>Events</h2>
+		<article class="eventsarticle">
+			<a href="#">
+
+				<h3>
+				Material Worlds: Water Futures
+				</h3>
+
+				<p>
+				Thu, Dec 1, 12:00 p.m.
+				</p>
+				<p>
+				Online Lecture/panel
+				</p>
+			
+			</a>
+			<a>
+				<img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="Image Merett Oppenheim">
+			</a>
+		</article>
+
+		<article class="eventsarticle">
+			<a href="#">
+
+				<h3>
+				Material Worlds: Water Futures
+				</h3>
+
+				<p>
+				Thu, Dec 1, 12:00 p.m.
+				</p>
+				<p>
+				Online Lecture/panel
+				</p>
+			
+			</a>
+			<a>
+				<img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="Image Merett Oppenheim">
+			</a>
+		</article>
+
+		<article class="eventsarticle">
+			<a href="#">
+
+				<h3>
+				Material Worlds: Water Futures
+				</h3>
+
+				<p>
+				Thu, Dec 1, 12:00 p.m.
+				</p>
+				<p>
+				Online Lecture/panel
+				</p>
+			
+			</a>
+			<a>
+				<img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="Image Merett Oppenheim">
+			</a>
+		</article>
+	</section>
 
 
-			<div>
-				<a href="#">
-					<figure>
-						<img src="images/MoMA_files/4-Dec-Members-save-20_.jpg" alt="Image Merett Oppenheim">
-							<figcaption>
-								<h2>Visit MoMA PS1 in Queens</h2>
-								<p>Free for New Yorkers
-									MoMA PS1</p>
-							</figcaption>
-					</figure>
-				</a>
-			</div>
-
-	<!-- Section #5 in Main -->
-		<section>
-			<ul>
-				<li>
-					<h2>Events</h2>
-				</li>
-				<li>
-					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
-					<h3>Material Worlds: Water Futures</h3>
-					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online Lecture/panel</p>
-				<li>
-					<img src="images/MoMA_files/2022_04_09_Pinocchio_1132 1142v3 (2).jpg" alt="Image Merett Oppenheim">
-					<h3>Material Worlds: Water Futures</h3>
-					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online Lecture/panel</p>
-				</li>
-				<li>					
-					<img src="images/MoMA_files/20221204_R.jpg" alt="Image Merett Oppenheim">
-					<h3>Material Worlds: Water Futures</h3>
-					<p>Thu, Dec 1, 12:00 p.m.</p>
-					<p>Online Lecture/panel</p>
-				</li>
-			</ul>
-			<a href="#">View all events</a>
-		</section>
 
 
-	<!-- Section #6 in Main -->
-		<section>
+
+
+
+	<!-- Section #8 in Main -->
+	<section>
+		<div>
 			<a href="#">
 				<h2>Discover more as a member</h2>
 				<p>Join today</p>
 			</a>
-		</section>
+		</div>
+		<div>
+			<img src="images/MoMA_files/membership-promo--whats-ahead.gif" alt="Membership image and gif">
+		</div>
+	</section>
 
-	<!-- Section #7in Main -->
+
+	<!-- Section #9 in Main -->
 		<section>
 			<h2>Store</h2>
 			<ul>
 				<li>
 					<a href="#">
-					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
-					<p>20% off sitewide + free shippings</p>
+					<img src="images/MoMA_files/afbeeldingen main/newarrivalsimage.jpg" alt="Image Merett Oppenheim">
+					<p>Shop new arrivals</p>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-					<img src="images/MoMA_files/130_1946_a-c_vw3_CCCR-Press Site.jpg" alt="Image Merett Oppenheim">
-					<p>Shop eco-friendly gifts</p>
+					<img src="images/MoMA_files/afbeeldingen main/dinnerwareimage.jpg" alt="Image Merett Oppenheim">
+					<p>Shop Vignelli rainbow dinnerware</p>
 					</a>
 				</li>
 			</ul>
 		</section>
 
 
-	<!-- Section #8 in Main -->
-		<section>
+	<!-- Section #10 in Main -->
+		<!-- <section>
 			<h4>MoMa would like to thank our major partners</h4>
-			<ul>
-				<li><a href="#"><img src="images/MoMA_files/20221204_R.jpg" alt="partnersname"></a></li>
-				<li><a href="#"><img src="images/MoMA_files/20221204_R.jpg" alt="partnersname"></a></li>
-				<li><a href="#"><img src="images/MoMA_files/20221204_R.jpg" alt="partnersname"></a></li>
-				<li><a href="#"><img src="images/MoMA_files/20221204_R.jpg" alt="partnersname"></a></li>
-			</ul>
-		</section>
+			<a href="#">
+				<ul>
+					<li><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4NSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg" alt="partnersname"></li>
+					<li><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg4OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="partnersname"></li>
+					<li><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg5MiJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg" alt="partnersname"></li>
+					<li><img src="images/MoMA_files/InTheCollection/W1siZiIsIjQ5NTg5MSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg" alt="partnersname"></li>
+				</ul>
+			</a>
+		</section> -->
+
+
+
+		<!-- Section Events Article -->
+
+<!-- Article blijft onder elkaar staan, en houdt de hele breedt -->
+
+
 	</main>
 
 
@@ -273,43 +319,45 @@ De code hiervoor heb ik van Sanne gekregen, link/bron: https://codepen.io/shooft
 			<li><a href="#"><p>Research & learning</p></a></li>
 			<li><a href="#"><p>Magazine</p></a></li>
 		</ul>
-		<section>
-			<h2>Log in</h2>
-		</section>
 	</section>
 
 	<section>
-		<section>
-			<h2>MoMA</h2>
-			<p>11 West 53 Street, Manhattan</p>
-			<hp>Open today 10:30 a.m. - 5:30 p.m.</hp>
-		</section>
-		<section>
-			<h2>MoMa PS1</h2>
-			<hp>Visit MoMa PS1 in Queens</hp>
-			<hp>Free for New Yorkers</p2>
-		</section>
+		<ul>
+			<li>
+				<h3>Moma</h3>
+				<p>11 West 53 Street, Manhattan</p>
+				<p>Open today 10:30 a.m. - 5:30 p.m.</p>
+			</li>
+			<li>
+				<h3>MoMa PS1</h3>
+				<p>Visit MoMa PS1 in Queens</p>
+				<p>Free for New Yorkers</p>
+			</li>
+		</ul>
+	</section>
 
-		<section>
-			<ul>
-				<li><p>Facebook</p></li>
-				<li><p>Twitter</p></li>
-				<li><p>Instagram</p></li>
-				<li><p>Youtube</p></li>
-				<li><p>Spotify</p></li>
-			</ul>
-		</section>
+	<section>
+		<ul>
+			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></li>
+			<li><p>Facebook</p></li>
+			<li><p>Twitter</p></li>
+			<li><p>Instagram</p></li>
+			<li><p>Youtube</p></li>
+			<li><p>Spotify</p></li>
+		</ul>
+	</section>
 
-		<section>
-			<form action="#"><p>and ideas in your inbox</p></form>
-		</section>
+	<section>
+		<form action="#"><p>and ideas in your inbox</p></form>
+	</section>
 
-		<section>
-			<div>
-				<h1>"logo"</h1><a href="images/MoMA_files/MomAlogo.png"></a>
-			</div>
-		</section>
-		
+	<section>
+		<div>
+			<h1>"logo"</h1><a href="images/MoMA_files/MomAlogo.png"></a>
+		</div>
+	</section>
+	
+	<section>
 		<ul>
 			<li><p>Privacy Policy</p></li>
 			<li><p>Terms of use</p></li>
